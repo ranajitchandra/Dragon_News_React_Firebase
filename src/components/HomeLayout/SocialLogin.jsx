@@ -21,9 +21,9 @@ export default function SocialLogin() {
 
     return (
         <>
-            <h2 className="text-xl text-gray-700 font-semibold p-2">Login With</h2>
-            <div className="my-5 space-y-2">
-                <button onClick={handleGoogleLogin} className="btn w-full btn-outline btn-secondary">
+            <h2 className="text-base md:text-xl text-gray-700 font-semibold p-2">Login With</h2>
+            <div className="my-3 md:my-5 space-y-2">
+                <button onClick={handleGoogleLogin} className="btn w-full btn-outline btn-secondary text-sm md:text-base">
                     <FaGoogle />Login with Google
                 </button>
             </div>

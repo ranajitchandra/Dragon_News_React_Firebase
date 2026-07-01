@@ -35,7 +35,7 @@ export default function SearchResults() {
 
     return (
         <div>
-            <h2 className="text-xl text-gray-700 font-semibold p-2">
+            <h2 className="text-lg md:text-xl text-gray-700 font-semibold p-2 break-words">
                 Search Results for "{query}" ({results.length})
             </h2>
             {results.length === 0 ? (

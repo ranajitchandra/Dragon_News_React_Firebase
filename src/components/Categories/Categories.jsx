@@ -15,10 +15,15 @@ export default function Categories() {
 
     return (
         <>
-            <h2 className="text-xl text-gray-700 font-semibold p-2">All Categories {categories.length}</h2>
-            <div className="flex flex-col gap-1 pt-5">
+            <h2 className="text-base md:text-xl text-gray-700 font-semibold p-2">All Categories {categories.length}</h2>
+            <div className="md:hidden flex gap-2 overflow-x-auto pb-2 px-2 scrollbar-hide">
                 {
-                    categories.map(category => <NavLink key={category.id} to={`/category/${category.id}`} className="text-accent font-semibold px-14 py-3 hover:bg-base-300 hover:font-extrabold">{category.name}</NavLink>)
+                    categories.map(category => <NavLink key={category.id} to={`/category/${category.id}`} className="text-accent font-semibold whitespace-nowrap px-4 py-2 rounded-lg bg-base-200 hover:bg-base-300 hover:font-extrabold text-sm">{category.name}</NavLink>)
+                }
+            </div>
+            <div className="hidden md:flex flex-col gap-1 pt-5">
+                {
+                    categories.map(category => <NavLink key={category.id} to={`/category/${category.id}`} className="text-accent font-semibold px-4 md:px-14 py-3 hover:bg-base-300 hover:font-extrabold">{category.name}</NavLink>)
                 }
             </div>
 

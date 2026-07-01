@@ -31,18 +31,18 @@ export default function Profile() {
     if (!user) return null
 
     return (
-        <div className="p-4">
-            <h2 className="text-xl text-gray-700 font-semibold p-2">My Profile</h2>
-            <div className="bg-white rounded-xl shadow-md p-6 border border-base-300">
+        <div className="px-2 md:px-4">
+            <h2 className="text-lg md:text-xl text-gray-700 font-semibold p-2">My Profile</h2>
+            <div className="bg-white rounded-xl shadow-md p-4 sm:p-6 border border-base-300">
                 <div className="flex flex-col items-center gap-4 mb-6">
                     <img
                         src={user.photoURL || defaultUser}
                         alt="Avatar"
-                        className="w-24 h-24 rounded-full object-cover"
+                        className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover"
                     />
                     <div className="text-center">
-                        <p className="text-lg font-semibold">{user.displayName || "No name set"}</p>
-                        <p className="text-accent text-sm">{user.email}</p>
+                        <p className="text-base sm:text-lg font-semibold break-all px-2">{user.displayName || "No name set"}</p>
+                        <p className="text-accent text-xs sm:text-sm break-all">{user.email}</p>
                     </div>
                 </div>
 
@@ -57,10 +57,10 @@ export default function Profile() {
                             <input type="url" value={photoUrl} onChange={e => setPhotoUrl(e.target.value)} className="w-full px-4 py-2 border rounded-lg" />
                         </div>
                         <div className="flex gap-2">
-                            <button type="submit" disabled={saving} className="bg-primary px-6 py-2 text-base-200 font-semibold rounded-lg">
+                            <button type="submit" disabled={saving} className="flex-1 sm:flex-none bg-primary px-6 py-2 text-base-200 font-semibold rounded-lg">
                                 {saving ? "Saving..." : "Save"}
                             </button>
-                            <button type="button" onClick={() => setEditing(false)} className="border border-base-300 px-6 py-2 font-semibold rounded-lg">
+                            <button type="button" onClick={() => setEditing(false)} className="flex-1 sm:flex-none border border-base-300 px-6 py-2 font-semibold rounded-lg">
                                 Cancel
                             </button>
                         </div>

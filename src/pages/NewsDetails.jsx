@@ -35,13 +35,13 @@ export default function NewsDetails() {
     }
 
     return (
-        <div className="max-w-6xl mx-auto">
-            <main className="grid grid-cols-12 gap-4">
-                <section className="col-span-9">
+        <div className="max-w-6xl mx-auto px-4 md:px-0">
+            <main className="grid grid-cols-1 md:grid-cols-12 gap-4">
+                <section className="md:col-span-8 lg:col-span-9">
                     <h2 className="max-w-2xl mx-auto text-xl text-gray-700 font-semibold p-2">Dragon News</h2>
                     <NewsDetailsCard news={news}></NewsDetailsCard>
                 </section>
-                <section className="col-span-3">
+                <section className="hidden md:block md:col-span-4 lg:col-span-3">
                     <RightAside></RightAside>
                 </section>
             </main>

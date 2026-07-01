@@ -37,10 +37,10 @@ const openings = [
 
 export default function Career() {
     return (
-        <div className="space-y-8">
-            <div className="bg-gradient-to-r from-primary to-secondary rounded-xl p-8 text-base-200">
-                <h1 className="text-3xl font-bold">Join the Dragon News Team</h1>
-                <p className="mt-2 opacity-90 max-w-2xl">
+        <div className="space-y-8 px-2 sm:px-0">
+            <div className="bg-gradient-to-r from-primary to-secondary rounded-xl p-6 sm:p-8 text-base-200">
+                <h1 className="text-2xl sm:text-3xl font-bold">Join the Dragon News Team</h1>
+                <p className="mt-2 opacity-90 max-w-2xl text-sm sm:text-base">
                     Help us shape the future of journalism in Bangladesh. We are always looking for
                     talented, passionate individuals who believe in the power of truth.
                 </p>

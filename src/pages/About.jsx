@@ -11,13 +11,13 @@ const team = [
 
 export default function About() {
     return (
-        <div className="space-y-8">
+        <div className="space-y-8 px-2 sm:px-0">
             <div className="relative rounded-xl overflow-hidden">
-                <img src={bg} alt="About Dragon News" className="w-full h-56 object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex items-center p-8">
+                <img src={bg} alt="About Dragon News" className="w-full h-48 sm:h-56 object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent flex items-center p-4 sm:p-8">
                     <div>
-                        <h1 className="text-4xl font-bold text-white">About Dragon News</h1>
-                        <p className="text-gray-300 mt-2 max-w-xl">Journalism Without Fear or Favour</p>
+                        <h1 className="text-2xl sm:text-4xl font-bold text-white">About Dragon News</h1>
+                        <p className="text-gray-300 mt-2 max-w-xl text-sm sm:text-base">Journalism Without Fear or Favour</p>
                     </div>
                 </div>
             </div>

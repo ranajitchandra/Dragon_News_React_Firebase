@@ -24,7 +24,7 @@ export default function CategoryNews(){
 
     return(
         <>
-            <h2 className="text-xl text-gray-700 font-semibold p-2">Category News {categoryNews.length}</h2>
+            <h2 className="text-xl text-gray-700 font-semibold md:p-2">Category News {categoryNews.length}</h2>
 
             {
                 categoryNews.map( news => <NewsCard key={news.id} news={news}></NewsCard>)

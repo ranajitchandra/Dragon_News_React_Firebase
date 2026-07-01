@@ -9,6 +9,8 @@ import Login from '../pages/Login'
 import Register from '../pages/register'
 import NewsDetails from '../pages/NewsDetails'
 import PrivateRoute from '../provider/PrivateRoute'
+import SearchResults from "../pages/SearchResults"
+import Profile from "../pages/Profile"
 import { ScaleLoader } from 'react-spinners'
 
 
@@ -29,6 +31,17 @@ export const router = createBrowserRouter(
                     hydrateFallbackElement: <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
                         <ScaleLoader color="#ffffff" />
                     </div>
+                },
+                {
+                    path: "/search",
+                    element: <SearchResults></SearchResults>,
+                    hydrateFallbackElement: <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
+                        <ScaleLoader color="#ffffff" />
+                    </div>
+                },
+                {
+                    path: "/profile",
+                    element: <PrivateRoute> <Profile></Profile> </PrivateRoute>
                 }
             ]
 

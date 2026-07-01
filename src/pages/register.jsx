@@ -1,30 +1,36 @@
 
 
 
-import React, { useContext } from 'react';
-import { Link } from 'react-router';
+import { useContext } from 'react';
+import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../provider/AuthProvider';
+import { updateProfile } from 'firebase/auth';
 
 const Register = () => {
 
     const { createUser } = useContext(AuthContext)
+    const navigate = useNavigate()
 
-    function handleRegister(e){
+    function handleRegister(e) {
         e.preventDefault()
         const name = e.target.displayName.value
         const photoUrl = e.target.photoUrl.value
         const email = e.target.email.value
         const password = e.target.password.value
 
-        console.log(name, photoUrl, email, password)
-
         createUser(email, password)
-        .then((result) => {
-            // console.log(result.user)
-        })
-        .catch((err) => {
-            console.log(err.message)
-        })
+            .then((result) => {
+                return updateProfile(result.user, {
+                    displayName: name,
+                    photoURL: photoUrl,
+                })
+            })
+            .then(() => {
+                navigate("/")
+            })
+            .catch((err) => {
+                console.log(err.message)
+            })
     }
 
 

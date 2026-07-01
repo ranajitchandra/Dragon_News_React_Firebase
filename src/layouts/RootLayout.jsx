@@ -17,12 +17,14 @@ export default function RootLayout() {
 
     return (
         <div className="max-w-6xl mx-auto px-4 md:px-0">
-            <header>
-                <Header></Header>
-                <LatestNews></LatestNews>
-                <Navbar></Navbar>
+            <header className="sticky top-0 z-50 bg-base-100">
+                <div className="max-w-6xl mx-auto px-4 md:px-0">
+                    <Header></Header>
+                    <Navbar></Navbar>
+                </div>
             </header>
-            <main className="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <LatestNews></LatestNews>
+            <main className="grid grid-cols-1 md:grid-cols-12 gap-6 pt-0 md:pt-4">
                 <section className="hidden md:block md:col-span-3 sticky top-0 h-fit">
                     <LeftAside></LeftAside>
                 </section>

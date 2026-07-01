@@ -1,5 +1,4 @@
-import logo from "../assets/logo.png"
-import demoUser from "../assets/demo-user.png"
+
 import bg from "../assets/bg.png"
 
 const team = [

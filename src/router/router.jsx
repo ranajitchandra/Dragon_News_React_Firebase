@@ -11,6 +11,8 @@ import NewsDetails from '../pages/NewsDetails'
 import PrivateRoute from '../provider/PrivateRoute'
 import SearchResults from "../pages/SearchResults"
 import Profile from "../pages/Profile"
+import About from "../pages/About"
+import Career from "../pages/Career"
 import { ScaleLoader } from 'react-spinners'
 
 
@@ -42,6 +44,14 @@ export const router = createBrowserRouter(
                 {
                     path: "/profile",
                     element: <PrivateRoute> <Profile></Profile> </PrivateRoute>
+                },
+                {
+                    path: "/about",
+                    element: <About></About>
+                },
+                {
+                    path: "/career",
+                    element: <Career></Career>
                 }
             ]
 

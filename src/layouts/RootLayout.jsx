@@ -16,25 +16,30 @@ export default function RootLayout() {
 
 
     return (
-        <div className="max-w-6xl mx-auto">
-            <header>
-                <Header></Header>
-                <LatestNews></LatestNews>
-                <Navbar></Navbar>
+        <div className="max-w-6xl mx-auto px-4 md:px-0">
+            <header className="sticky top-0 z-50 bg-base-100">
+                <div className="max-w-6xl mx-auto px-4 md:px-0">
+                    <Header></Header>
+                    <Navbar></Navbar>
+                </div>
             </header>
-            <main className="grid grid-cols-12 gap-6">
-                <section className="col-span-3 sticky top-0 h-fit">
+            <LatestNews></LatestNews>
+            <main className="grid grid-cols-1 md:grid-cols-12 gap-6 pt-0 md:pt-4">
+                <section className="hidden md:block md:col-span-3 sticky top-0 h-fit">
                     <LeftAside></LeftAside>
                 </section>
-                <section className="col-span-6">
+                <section className="md:col-span-6">
                     {state == "loading" ? <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
                         <ScaleLoader color="#ffffff" />
                     </div> : <Outlet></Outlet>}
                 </section>
-                <section className="col-span-3 sticky top-0 h-fit">
+                <section className="hidden lg:block lg:col-span-3 sticky top-0 h-fit">
                     <RightAside></RightAside>
                 </section>
             </main>
+            <section className="md:hidden mt-6">
+                <LeftAside></LeftAside>
+            </section>
 
         </div>
     )
